@@ -1,0 +1,21 @@
+# data and large files: never commit
+*.dat
+*.npy
+*.pth
+*.pt
+*.vital
+physio_memmap/
+mimic_memmap*/
+Master_Training_Data*/
+*_Processed_Data*/
+# secrets
+kaggle.json
+.env
+# python / notebooks
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.venv/
+# OS
+.DS_Store
+Thumbs.db

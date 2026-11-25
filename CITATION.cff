@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use this code, please cite the paper."
+title: "Self-Supervised Multimodal Waveform Pretraining for Multi-Horizon Prediction of Intraoperative Vasopressor Requirement"
+authors:
+  - family-names: Ahasan
+    given-names: Mir Mashrafi
+  - family-names: Briti
+    given-names: Jesia
+  - family-names: Rahman
+    given-names: Moshiur
+  - family-names: Shuvo
+    given-names: Samiul Based
+  - family-names: Ferdous
+    given-names: Jahid
+year: 2026
+license: MIT
+repository-code: "https://github.com/darkyagami23/ICU-Pretraining-for-Vasopressors"
