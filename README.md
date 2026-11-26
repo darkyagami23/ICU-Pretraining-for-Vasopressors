@@ -48,11 +48,13 @@ The experiments were run on Kaggle (2× NVIDIA T4, 4× NVIDIA L4) and Google Col
 
 ## Reproducing the results
 
-### Option A: rebuild every table from the released predictions (CPU, minutes)
+### Option A: inspect or rebuild the tables (CPU)
+
+`results/eval_paper/` holds the evaluation output the paper was written from, and `results/SUPPLEMENTARY_NUMBERS.md` lists every number in the paper and supplement. The per-run prediction folders (`runs/`) are not included because of their size. Given them, this command rebuilds every table:
 
 ```bash
 cd code
-python evaluate.py --runs_dir ../results/runs --reference trimodal_ssl \
+python evaluate.py --runs_dir <runs> --reference trimodal_ssl \
     --memmap_dir <physio_memmap> --max_flat_frac 0.1 --masked_15 --out_dir ../results/eval_paper
 ```
 
@@ -102,7 +104,12 @@ Positive (vasopressor) PPG windows were extracted with a different processing st
 
 ## Pretrained weights
 
-Released as GitHub release assets: [link to the release]. They include the fine-tuned VitalDB fold models; for the MIMIC-derived pretrained encoder, see the release notes.
+Release [v1.0](https://github.com/darkyagami23/ICU-Pretraining-for-Vasopressors/releases/tag/v1.0) contains the encoder pretrained on MIMIC-BP (100-epoch schedule) that all main experiments use:
+
+- `hybrid_v4_encoders.pth`: encoder weights; pass to `finetune.py --encoder_path`.
+- `hybrid_v4_full.pth`: the full pretraining model (encoders, decoders, projection heads); used for the reconstruction and retrieval results (`pretrain.py --retrieval_only`).
+
+Fine-tuned VitalDB fold models are not released.
 
 ## Citation
 
