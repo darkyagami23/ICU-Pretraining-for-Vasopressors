@@ -1,0 +1,39 @@
+Windows read: 13662 across 6 horizons, 2246 cases
+Clinical table: 6388 rows, columns include: caseid, subjectid, age, sex, asa, ane_type, department, intraop_eph, intraop_phe, intraop_epi
+Cases used both as vasopressor case and as control: 0 []
+Patients in BOTH test and train/val: 9
+  -> excluded 114 train/val windows of those patients (test unchanged)
+Dev patients: 1963 (95 with >=1 positive window)
+
+Per horizon:
+  offset_3m   dev=2026 (pos 123) | test=232 (pos 18, prev 7.8%) | test positives come from 12 cases / 12 patients | cases with >1 positive window: 21
+     folds (n, pos): 0:(402,22), 1:(407,22), 2:(411,32), 3:(399,22), 4:(407,25)
+  offset_5m   dev=2026 (pos 123) | test=232 (pos 18, prev 7.8%) | test positives come from 12 cases / 12 patients | cases with >1 positive window: 21
+     folds (n, pos): 0:(402,22), 1:(407,22), 2:(411,32), 3:(399,22), 4:(407,25)
+  offset_7m   dev=2026 (pos 123) | test=232 (pos 18, prev 7.8%) | test positives come from 12 cases / 12 patients | cases with >1 positive window: 21
+     folds (n, pos): 0:(402,22), 1:(407,22), 2:(411,32), 3:(399,22), 4:(407,25)
+  offset_10m  dev=2026 (pos 123) | test=232 (pos 18, prev 7.8%) | test positives come from 12 cases / 12 patients | cases with >1 positive window: 21
+     folds (n, pos): 0:(402,22), 1:(407,22), 2:(411,32), 3:(399,22), 4:(407,25)
+  offset_12m  dev=2026 (pos 123) | test=232 (pos 18, prev 7.8%) | test positives come from 12 cases / 12 patients | cases with >1 positive window: 21
+     folds (n, pos): 0:(402,22), 1:(407,22), 2:(411,32), 3:(399,22), 4:(407,25)
+  offset_15m  dev=2026 (pos 123) | test=232 (pos 18, prev 7.8%) | test positives come from 12 cases / 12 patients | cases with >1 positive window: 21
+     folds (n, pos): 0:(402,22), 1:(407,22), 2:(411,32), 3:(399,22), 4:(407,25)
+
+Cohort table (Table 1):
+                                                                       Vasopressor cases                                                     Control cases                                                             Total
+Cases, n                                                                             112                                                              2134                                                              2246
+Patients, n                                                                          108                                                              2088                                                              2188
+Age, years                                                                    65 [56-72]                                                        60 [51-69]                                                        61 [51-69]
+Female sex, %                                                                       39.3                                                              45.3                                                              45.0
+ASA >= III, %                                                                       23.2                                                              15.5                                                              15.9
+General anaesthesia, %                                                             100.0                                                              99.8                                                              99.8
+Surgery duration, min                                                      227 [140-325]                                                     145 [100-218]                                                     150 [100-220]
+Department, %           General surgery 68; Thoracic surgery 29; Gynecology 3; Urology 1  General surgery 64; Thoracic surgery 28; Gynecology 6; Urology 2  General surgery 64; Thoracic surgery 28; Gynecology 6; Urology 2
+train cases                                                                           89                                                              1707                                                              1796
+val cases                                                                             11                                                               213                                                               224
+test cases                                                                            12                                                               214                                                               226
+
+[!] Control cases with a recorded intra-op bolus of intraop_eph/intraop_phe/intraop_epi: 1232 of 2134
+    These "controls" received a vasopressor bolus (not visible in infusion tracks). List saved to controls_with_bolus.csv. Decide whether to drop them (state it in the paper).
+
+[OK] wrote /kaggle/working/splits/windows.csv

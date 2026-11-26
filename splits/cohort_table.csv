@@ -1,0 +1,12 @@
+,Vasopressor cases,Control cases,Total
+"Cases, n",112,2134,2246
+"Patients, n",108,2088,2188
+"Age, years",65 [56-72],60 [51-69],61 [51-69]
+"Female sex, %",39.3,45.3,45.0
+"ASA >= III, %",23.2,15.5,15.9
+"General anaesthesia, %",100.0,99.8,99.8
+"Surgery duration, min",227 [140-325],145 [100-218],150 [100-220]
+"Department, %",General surgery 68; Thoracic surgery 29; Gynecology 3; Urology 1,General surgery 64; Thoracic surgery 28; Gynecology 6; Urology 2,General surgery 64; Thoracic surgery 28; Gynecology 6; Urology 2
+train cases,89,1707,1796
+val cases,11,213,224
+test cases,12,214,226
