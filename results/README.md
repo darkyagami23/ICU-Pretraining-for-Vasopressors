@@ -1,7 +1,6 @@
 # Results
 
 - `SUPPLEMENTARY_NUMBERS.md`: every number in the paper's tables and supplementary tables.
-- `runs/`: one folder per run, copied from the final Kaggle notebook output (`runs/`). Each holds `preds_test_<horizon>.csv` (calibrated test probability per window and per fold model, BP predictions and targets), `preds_oof_<horizon>.csv`, `summary_<horizon>.json`, `summary.csv` and `config.json` (the exact flags).
-- `eval_paper/`: the evaluation output used for the paper (`results_long.csv`, `table_auroc.*`, `pooled_vs_reference.csv`, `label_efficiency.csv`).
+- `eval_paper/`: the evaluation output the paper was written from (`results_long.csv`, `table_auroc.*`, `pooled_vs_reference.csv`, `label_efficiency.csv` and related tables), produced by `code/evaluate.py` with `--max_flat_frac 0.1 --masked_15`.
 
-Fold checkpoints (`*.pth`) are not stored here; see the GitHub release.
+The per-run prediction folders and fold checkpoints are not included because of their size. The pretrained encoder is in [release v1.0](https://github.com/darkyagami23/ICU-Pretraining-for-Vasopressors/releases/tag/v1.0).
